@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+body {
+    background: rgb(53, 49, 49);
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.container-picture{
+    border: 4px solid rgb(46, 14, 187);;
+    width: 250px;
+    height: 250px;
+    border-radius: 130px;
+    
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 130px;
+}
+
+.container-text{
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 40px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.highlight{
+    color: rgb(83, 232, 243);
+}
+
+.container-general {
+  display: flex;
+  width: 800px;
+  gap: 30px;
+  align-items: center;
+}
+
+.download-cv{
+    background: rgb(46, 14, 187);
+    color: rgb(83, 232, 243);
+    border-radius: 30px;
+    padding: 12px 36px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    
+}
+
+.download-cv:hover{
+  background: rgb(83, 232, 243);
+  color: rgb(46, 14, 187);
+  transition: ease 0.3s;
+}
+
+
+.container-buttons{
+  display: flex;
+  gap: 12px;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-top: 12px;
+
+}
+
+h2{
+   color: rgb(255, 255, 255);
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+    min-height: 400px; /* Ajusta este valor según tus necesidades */
+  background-color: rgb(46, 14, 187);
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  font-family: "Michroma", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  background-color: rgb(83, 232, 243);
+  color: rgb(46, 14, 187);
+}
+
+section div article img{
+  width: 200px;
+  height: 150px;
+  border-radius: 30px;
+}
+
+.projects-section{
+ margin-top: 130px;
+}
+
+.projects-grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tech-icons{
+  display: flex;
+  gap: 12px;
+  align-items: center; 
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.saso{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+.skills{
+  margin-top: 10vh;
+}
+
+.skills-languaje {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.emoji-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+
+}
+
+.emoji-item span {
+  font-size: 3rem;
+  transition: transform 0.2s ease;
+  margin-top: 1.5vh;
+}
+
+.emoji-item span:hover {
+  transform: scale(1.2);
+}
+
+.emoji-item p {
+  margin-top: 1vh;
+  font-size: 1rem;
+  color: white;
+}
+
+
+.Knowledge{
+  margin-top: 10vh;
+}
+
+
+.Knowledge-languaje {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.emoji-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100px;
+  text-align: center;
+}
+
+.emoji-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%; 
+  transition: transform 0.2s ease;
+  margin-top: 1.5vh;
+}
+
+.emoji-item img:hover {
+  transform: scale(1.2);
+  cursor: text;
+}
+
+.emoji-item p {
+  margin-top: 1vh;
+  font-size: 1rem;
+  color: white;
+  margin-top: 1.5vh;
+}
+
+.linkedin {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent; 
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto-linkedin {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  border-radius: 50%;
+  display: block;
+}
+
+.linkedin:hover{
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  cursor: pointer;
+  outline: 2px solid rgb(83, 232, 243);
+}
+
+.github-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url('img/githup.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  
+}
+
+.github-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  outline: 2px solid rgb(83, 232, 243);
+}
+
+#more{
+  background: rgb(46, 14, 187);
+    color: rgb(83, 232, 243);
+    border-radius: 30px;
+    padding: 12px 36px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+   
+
+}
+#more:hover{
+  background: rgb(83, 232, 243);
+  color: rgb(46, 14, 187);
+  transition: ease 0.3s;
+}
+.ocultar {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;   
+  margin-top: 20px;   
+}
+
+#more {
+  margin: 20px; 
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+#extraProjects {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#extraProjects.show {
+  opacity: 1;
+}
+
+
+/* --------------------------------------------- */
+/* Responsive: Tablets (768px - 1024px) */
+/* --------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    margin: 50px auto;
+    max-width: 90%;
+  }
+
+  .container-general {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .container-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  section div article img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .download-cv, #more {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+  }
+
+  .emoji-item span {
+    font-size: 2.5rem;
+  }
+
+  .emoji-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-icons, .skills-languaje, .Knowledge-languaje {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* --------------------------------------------- */
+/* Responsive: Móviles (menos de 768px) */
+/* --------------------------------------------- */
+@media (max-width: 767px) {
+  body {
+    margin: 30px auto;
+    max-width: 95%;
+  }
+
+  .container-general {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .container-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  section div article img {
+    width: 100%;
+    height: auto;
+  }
+
+  .download-cv, #more {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .emoji-item span {
+    font-size: 2rem;
+  }
+
+  .emoji-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tech-icons, .skills-languaje, .Knowledge-languaje {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .projects-section {
+    margin-top: 60px;
+  }
+
+  .skills, .Knowledge {
+    margin-top: 8vh;
+  }
+}
+
+/* Sección Herramientas */
+.tools {
+  text-align: center;
+  margin-top: 60px;
+}
+.tools h2 {
+  color: #F4F4F4;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de tarjetas de herramientas */
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+h3{
+    color: #fff;
+}
+
+/* Reutilizamos la clase flip-card existente para herramientas */
+.tools-container .flip-card {
+  width: 180px;
+  height: 220px;
+  perspective: 1000px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.tools-container .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tools-container .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tools-container .flip-card-front,
+.tools-container .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Imagen frontal de la herramienta */
+.tools-container .flip-card-front img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+/* Parte trasera de la tarjeta */
+.tools-container .flip-card-back {
+  background-color: #1D546C; /* mismo azul que las tarjetas de proyectos */
+  color: #F4F4F4;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  padding: 15px;
+}
+
+.tools-container .flip-card-back h3 {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+ 
+}
+
+.tools-container .flip-card-back p {
+  margin: 5px 0;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .tools-container .flip-card {
+    width: 140px;
+    height: 180px;
+  }
+  .tools-container .flip-card-front img {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+  }
+  .tools-container .flip-card-back {
+    font-size: 11px;
+    padding: 10px;
+  }
+}
+
+/* Sección Experiencia */
+.experience, .projects { text-align: center; margin-top: 60px; }
+.experience h2, .projects h2 { color: #F4F4F4; margin-bottom: 30px; }
+
+/* Flip card container */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 0 15px 00px 15px;
+  vertical-align: top;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  background-color: #1D546C;
+  color: #F4F4F4;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+   overflow: hidden; /* evita que el contenido haga crecer la tarjeta */
+    padding: 15px; /* igual tamaño visual que antes del hover */
+}
+
+.flip-card-back h3 { margin-top: 0; margin-bottom: 10px; font-weight: bold; }
+.flip-card-back p { margin: 0 0 10px 0; }
+
+.description {
+  background-color: #1A3D64;
+  color: white;
+  width: 100%;
+  padding: 25px 20px;
+  font-size: 24px;
+  text-align: center;
+  white-space: pre-wrap;
+  min-height: 100px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
