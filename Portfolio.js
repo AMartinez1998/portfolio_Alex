@@ -88,24 +88,111 @@ img.onload = () => {
 };
 
 
-   
-  const descriptionEs = "Soy un desarrollador web junior apasionado por crear páginas web modernas y funcionales. Me encanta aprender nuevas tecnologías y mejorar mis habilidades día a día.";
-  const descriptionEn = "I am a junior web developer passionate about creating modern and functional websites. I love learning new technologies and improving my skills every day.";
-  let index = 0;
-  let isEnglish = false;
-  const typedElement = document.getElementById("typed-description");
-  
-  function typeWriter(text) {
-    typedElement.innerHTML = "";
-    index = 0;
-    function typing() {
-      if(index < text.length) {
-        typedElement.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typing, 45);
-      }
+   const descriptionEs =
+  "Soy un desarrollador web junior apasionado por crear páginas web modernas y funcionales. Me encanta aprender nuevas tecnologías y mejorar mis habilidades día a día.";
+
+const descriptionEn =
+  "I am a junior web developer passionate about creating modern and functional websites. I love learning new technologies and improving my skills every day.";
+
+const typedElement = document.getElementById("typed-description");
+
+let index = 0;
+let currentLang = "es";
+
+function typeWriter(text) {
+  typedElement.innerHTML = "";
+  index = 0;
+
+  function typing() {
+    if (index < text.length) {
+      typedElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typing, 45);
     }
-    typing();
   }
+
+  typing();
+}
+
+// 👉 Primera carga
+typeWriter(descriptionEs);
+
+// 👉 Botón traducir
+document.getElementById("translatePage").addEventListener("click", () => {
+  currentLang = currentLang === "es" ? "en" : "es";
+
+  typeWriter(
+    currentLang === "es" ? descriptionEs : descriptionEn
+  );
+});
+
+
+
   
-  typeWriter(descriptionEs);
+  const translations = {
+    "Desarrollador Web": "Web Developer",
+    "Desarrollador full-stack, listo para aportar valor a tu empresa.": "Full-stack developer, ready to bring value to your company.",
+    "Descargar CV": "Download CV",
+    "Experiencia": "Experience",
+    "Desarrollador Web Junior": "Junior Web Developer",
+    "Desarrollo de páginas web con HTML, CSS y JavaScript.": "Development of web pages using HTML, CSS and JavaScript.",
+    "Aplicación de diseño responsive para todos los dispositivos.": "Responsive design implementation for all devices.",
+    "Mantenimiento y mejoras de sitios web existentes.": "Maintenance and improvements of existing websites.",
+    "Conversión de prototipos de Figma a páginas funcionales.": "Conversion of Figma prototypes into functional web pages.",
+    "Mis Proyectos": "My Projects",
+    "Restaurante Amelia": "Amelia Restaurant",
+    "Sitio web para reservas en un restaurante de alta cocina.": "Website for reservations at a fine dining restaurant.",
+    "Aplicación del Clima": "Weather App",
+    "¿Quieres saber cómo estará el clima?": "Want to know what the weather will be like?",
+    "Clínica Dentalmall": "Dentalmall Clinic",
+    "¿Necesitas una revisión dental? Esta es la clínica para ti.": "Need a dental checkup? This is the clinic for you.",
+    "Generar tu clave aleatoria": "Generate your random password",
+    "Obtén tu propia clave sin pensar demasiado.": "Get your own password instantly.",
+    "Lista de Tareas": "To-Do List",
+    "Organiza tus tareas para ser más eficiente.": "Organize your tasks to be more efficient.",
+    "Tabla de Cuotas de Préstamos": "Loan Payment Table",
+    "Mantente al tanto de tus pagos mensuales.": "Stay on top of your monthly payments.",
+    "Ver más": "See more",
+    "Librería de Chistes": "Joke Library",
+    "Sé el más divertido en tus reuniones.": "Be the funniest one in your meetings.",
+    "Aprendido en cursos online y práctica personal.": "Learned through online courses and personal practice.",
+    "Aprendido en cursos y práctica en proyectos personales.": "Learned through courses and hands-on practice in personal projects.",
+    "Aprendido en cursos y mini proyectos personales.": "Learned through courses and small personal projects.",
+    "Aprendido en tutoriales y prototipos de diseño.": "Learned through tutorials and design prototypes.",
+    "Aprendido en prácticas de gestión de proyectos.": "Learned through project management practices.",
+    "Aprendido en cursos y práctica en proyectos colaborativos.": "Learned through courses and hands-on practice in collaborative projects.",
+    "Aprendido en cursos y práctica en control de versiones.": "Learned through courses and hands-on practice in version control.",
+    "Usado en: Proyecto 1, Proyecto 2, Proyecto 3": "Used in: Project 1, Project 2, Project 3",
+    "Usado en: Proyecto 3": "Used in: Project 3",
+    "Usado en: Proyecto 1, Proyecto 2": "Used in: Project 1, Project 2",
+    "Usado en: Proyecto 2, Proyecto 3": "Used in: Project 2, Project 3",
+    "Herramientas Conocidas": "Known Tools",
+    "Habilidades Blandas": "Soft Skills",
+    "Trabajo en equipo": "Teamwork",
+    "Organizado": "Organized",
+    "Resolución de problemas": "Problem solving",
+    "Creativo": "Creative",
+    "Proactivo": "Proactive",
+    "Eficiente": "Efficient"
+  };
+
+  let translated = false;
+
+  document.getElementById("translatePage").addEventListener("click", () => {
+      const elements = document.querySelectorAll("h1, h2, h3, p, li, button, span");
+
+      elements.forEach(el => {
+          const original = el.textContent.trim();
+
+          if (!translated && translations[original]) {
+              el.textContent = translations[original];
+          } else if (translated && Object.values(translations).includes(original)) {
+              el.textContent = Object.keys(translations)
+                  .find(key => translations[key] === original);
+          }
+      });
+
+      translated = !translated;
+      document.getElementById("translatePage").textContent = translated ? "Spanish" : "English";
+  });
+
